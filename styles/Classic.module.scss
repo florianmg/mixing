@@ -1,0 +1,10 @@
+.pageContainer {
+  max-width: 1500px;
+  width: 100%;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  .originals {
+    display: flex;
+  }
+}
