@@ -1,0 +1,124 @@
+{
+  "fimo": [
+    {
+      "fimoId": "0",
+      "color": "rgb(255, 255, 255)",
+      "link": ""
+    },
+    {
+      "fimoId": "00",
+      "color": "rgb(227 248 248)",
+      "link": ""
+    },
+    {
+      "fimoId": "02",
+      "color": "rgb(255 212 153)",
+      "link": ""
+    },
+    {
+      "fimoId": "05",
+      "color": "rgb(202 200 226)",
+      "link": ""
+    },
+    {
+      "fimoId": "1",
+      "color": "rgb(247 239 1)",
+      "link": ""
+    },
+    {
+      "fimoId": "15",
+      "color": "rgb(252 222 20)",
+      "link": ""
+    },
+    {
+      "fimoId": "17",
+      "color": "rgb(207 142 15)",
+      "link": ""
+    },
+    {
+      "fimoId": "2",
+      "color": "rgb(229 8 26)",
+      "link": ""
+    },
+    {
+      "fimoId": "21",
+      "color": "rgb(230 0 96)",
+      "link": ""
+    },
+    {
+      "fimoId": "23",
+      "color": "rgb(105 28 30)",
+      "link": ""
+    },
+    {
+      "fimoId": "29",
+      "color": "rgb(157 20 40)",
+      "link": ""
+    },
+    {
+      "fimoId": "32",
+      "color": "rgb(0 137 153)",
+      "link": ""
+    },
+    {
+      "fimoId": "33",
+      "color": "rgb(0 55 127)",
+      "link": ""
+    },
+    {
+      "fimoId": "34",
+      "color": "rgb(0 34 62)",
+      "link": ""
+    },
+    {
+      "fimoId": "37",
+      "color": "rgb(0 71 144)",
+      "link": ""
+    },
+    {
+      "fimoId": "38",
+      "color": "rgb(0 130 97)",
+      "link": ""
+    },
+    {
+      "fimoId": "4",
+      "color": "rgb(243 105 25)",
+      "link": ""
+    },
+    {
+      "fimoId": "43",
+      "color": "rgb(249 181 119)",
+      "link": ""
+    },
+    {
+      "fimoId": "45",
+      "color": "rgb(206 140 97)",
+      "link": ""
+    },
+    {
+      "fimoId": "5",
+      "color": "rgb(4 132 66)",
+      "link": ""
+    },
+    {
+      "fimoId": "57",
+      "color": "rgb(24 119 63)",
+      "link": ""
+    },
+    {
+      "fimoId": "6",
+      "color": "rgb(27 21 93)",
+      "link": ""
+    },
+    {
+      "fimoId": "77",
+      "color": "rgb(125 53 56)",
+      "link": ""
+    },
+    {
+      "fimoId": "9",
+      "color": "rgb(0 0 0)",
+      "link": ""
+    }
+  ]
+}
