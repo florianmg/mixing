@@ -1,5 +1,9 @@
+import React from "react";
+
 import Block from "../src/components/block";
 import ClassicBlock from "../src/components/classic-block";
+
+import { ClassicPageProps } from "../src/types/pages.types";
 
 import style from "../styles/Classic.module.scss";
 
@@ -17,7 +21,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function Classic({ originalClay, mixedClay }) {
+const Classic: React.FC<ClassicPageProps> = ({ originalClay, mixedClay }) => {
   return (
     <div className={style.pageContainer}>
       <p>Original Clay's</p>
@@ -33,4 +37,6 @@ export default function Classic({ originalClay, mixedClay }) {
       </div>
     </div>
   );
-}
+};
+
+export default Classic;
