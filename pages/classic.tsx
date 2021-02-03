@@ -1,6 +1,4 @@
-import { useEffect } from "react";
-
-// import Block from "../src/components/block";
+import Block from "../src/components/block";
 import ClassicBlock from "../src/components/classic-block";
 
 import style from "../styles/Classic.module.scss";
@@ -10,21 +8,27 @@ export async function getStaticProps() {
     method: "GET",
     mode: "no-cors",
   });
-  const { fimo } = await response.json();
+  const { fimo, mixed } = await response.json();
   return {
     props: {
       originalClay: fimo,
+      mixedClay: mixed,
     },
   };
 }
 
-export default function Classic({ originalClay }) {
+export default function Classic({ originalClay, mixedClay }) {
   return (
     <div className={style.pageContainer}>
       <p>Original Clay's</p>
       <div className={style.originals}>
         {originalClay.map(({ color, fimoId }) => (
           <ClassicBlock blockKey={fimoId} color={color} />
+        ))}
+      </div>
+      <div>
+        {mixedClay.map(({ mixedId, color }) => (
+          <Block blockKey={mixedId} color={color} />
         ))}
       </div>
     </div>
