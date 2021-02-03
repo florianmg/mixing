@@ -23,12 +23,12 @@ export default function Classic({ originalClay, mixedClay }) {
       <p>Original Clay's</p>
       <div className={style.originals}>
         {originalClay.map(({ color, fimoId }) => (
-          <ClassicBlock blockKey={fimoId} color={color} />
+          <ClassicBlock blockKey={fimoId} color={color} key={fimoId} />
         ))}
       </div>
       <div>
         {mixedClay.map(({ mixedId, color }) => (
-          <Block blockKey={mixedId} color={color} />
+          <Block color={color} key={mixedId} />
         ))}
       </div>
     </div>

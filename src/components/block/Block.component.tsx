@@ -1,15 +1,10 @@
-import classnames from "classnames";
 import Bar from "../bar";
 
 import style from "./Block.module.scss";
 
-export default function Block({ blockKey, color }) {
+export default function Block({ color }) {
   return (
-    <div
-      key={blockKey}
-      style={{ backgroundColor: color }}
-      className={style.block}
-    >
+    <div style={{ backgroundColor: color }} className={style.block}>
       <div className={style.content}>
         <div className={style.side}>
           <Bar color="#FF0000" />
