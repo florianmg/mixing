@@ -4,7 +4,7 @@ import ClassicBlock from "../src/components/classic-block";
 import style from "../styles/Classic.module.scss";
 
 export async function getStaticProps() {
-  const response = await fetch("http://localhost:3000/originalClay.json", {
+  const response = await fetch("http://localhost:3000/clays.json", {
     method: "GET",
     mode: "no-cors",
   });
