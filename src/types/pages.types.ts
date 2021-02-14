@@ -15,13 +15,14 @@ type OriginalClayType = {
 type MixedClayTye = {
   mixedId: string;
   color: string;
-  base: [
+  bases: [
     {
       fimoId: string;
-      quantity: string;
+      color: string;
+      quantity: number;
     }
   ];
-}[];
+}[][];
 
 export type ClassicPageProps = {
   originalClay: OriginalClayType;

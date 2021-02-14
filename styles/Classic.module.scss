@@ -4,7 +4,21 @@
   display: flex;
   margin: auto;
   flex-direction: column;
+  padding: 0 25px;
+  box-sizing: border-box;
+
   .originals {
     display: flex;
+    padding: 0 25px;
+    box-sizing: border-box;
+  }
+
+  .mix-container {
+    margin-top: 150px;
+  }
+
+  .mix-list {
+    display: flex;
+    flex-wrap: wrap;
   }
 }

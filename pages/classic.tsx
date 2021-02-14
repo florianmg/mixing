@@ -1,7 +1,7 @@
 import React from "react";
 
-import Block from "../src/components/block";
 import ClassicBlock from "../src/components/classic-block";
+import GroupColor from "../src/components/group-color";
 
 import { ClassicPageProps } from "../src/types/pages.types";
 
@@ -24,16 +24,19 @@ export async function getStaticProps() {
 const Classic: React.FC<ClassicPageProps> = ({ originalClay, mixedClay }) => {
   return (
     <div className={style.pageContainer}>
-      <p>Original Clay's</p>
+      <h3>Original Clay's</h3>
       <div className={style.originals}>
         {originalClay.map(({ color, fimoId }) => (
           <ClassicBlock blockKey={fimoId} color={color} key={fimoId} />
         ))}
       </div>
-      <div>
-        {mixedClay.map(({ mixedId, color }) => (
-          <Block color={color} key={mixedId} />
-        ))}
+      <div className={style["mix-container"]}>
+        <h3>Mixed Clay</h3>
+        <div className={style["mix-list"]}>
+          {mixedClay.map((items) => (
+            <GroupColor mixedList={items} />
+          ))}
+        </div>
       </div>
     </div>
   );
