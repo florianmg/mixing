@@ -1,29 +1,28 @@
-import { useState, useEffect } from "react";
-
 import Bar from "../bar";
 
 import style from "./Block.module.scss";
 
 export default function Block({ color, bases }) {
-  const [baseLeftQuantity, setBaseLeftQuantity] = useState(0);
-  const [baseRightQuantity, setBaseRightQuantity] = useState(0);
+  const renderBars = ({ quantity, color }) => {
+    let toRender = [];
 
-  useEffect(() => {
-    const leftQuantity = bases[0];
-    const rightQuantity = bases[0];
+    for (let qty = quantity; qty > 0; qty = qty - 100) {
+      const percent = qty > 100 ? 100 : qty;
+      toRender.push(<Bar color={color} fillPercent={percent} />);
+    }
 
-    setBaseLeftQuantity(leftQuantity);
-    setBaseRightQuantity(rightQuantity);
-  }, []);
+    return toRender;
+  };
+
   return (
     <div style={{ backgroundColor: color }} className={style.block}>
       <div className={style.content}>
         <div className={style.side}>
-          <Bar color={bases[0].color} />
+          {renderBars({ color: bases[0].color, quantity: bases[0].quantity })}
         </div>
         <p className={style.side}>+</p>
         <div className={style.side}>
-          <Bar color={bases[1].color} />
+          {renderBars({ color: bases[1].color, quantity: bases[1].quantity })}
         </div>
       </div>
     </div>
