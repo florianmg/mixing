@@ -24,6 +24,16 @@
       "fimoId": "24",
       "color": "rgb(228 18 47)",
       "link": ""
+    },
+    {
+      "fimoId": "22",
+      "color": "rgb(213 74 154)",
+      "link": ""
+    },
+    {
+      "fimoId": "63",
+      "color": "rgb(107 46 139)",
+      "link": ""
     }
   ],
   "mixed": [
@@ -351,6 +361,342 @@
           {
             "fimoId": "24",
             "color": "rgb(228 18 47)",
+            "quantity": 300,
+            "link": ""
+          },
+          {
+            "fimoId": "9",
+            "color": "rgb(0, 0, 0)",
+            "quantity": 100,
+            "link": ""
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "mixedId": "m25",
+        "color": "rgb(243 196 212)",
+        "bases": [
+          {
+            "fimoId": "0",
+            "color": "rgb(255, 255, 255)",
+            "quantity": 275,
+            "link": ""
+          },
+          {
+            "fimoId": "24",
+            "color": "rgb(228 18 47)",
+            "quantity": 25,
+            "link": ""
+          }
+        ]
+      },
+      {
+        "mixedId": "m26",
+        "color": "rgb(236 151 162)",
+        "bases": [
+          {
+            "fimoId": "0",
+            "color": "rgb(255, 255, 255)",
+            "quantity": 300,
+            "link": ""
+          },
+          {
+            "fimoId": "24",
+            "color": "rgb(228 18 47)",
+            "quantity": 100,
+            "link": ""
+          }
+        ]
+      },
+      {
+        "mixedId": "m27",
+        "color": "rgb(235 126 121)",
+        "bases": [
+          {
+            "fimoId": "0",
+            "color": "rgb(255, 255, 255)",
+            "quantity": 200,
+            "link": ""
+          },
+          {
+            "fimoId": "24",
+            "color": "rgb(228 18 47)",
+            "quantity": 200,
+            "link": ""
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "mixedId": "m28",
+        "color": "rgb(226 46 69)",
+        "bases": [
+          {
+            "fimoId": "24",
+            "color": "rgb(228 18 47)",
+            "quantity": 300,
+            "link": ""
+          },
+          {
+            "fimoId": "22",
+            "color": "rgb(213 74 154)",
+            "quantity": 100,
+            "link": ""
+          }
+        ]
+      },
+      {
+        "mixedId": "m29",
+        "color": "rgb(224 79 106)",
+        "bases": [
+          {
+            "fimoId": "24",
+            "color": "rgb(228 18 47)",
+            "quantity": 200,
+            "link": ""
+          },
+          {
+            "fimoId": "22",
+            "color": "rgb(213 74 154)",
+            "quantity": 200,
+            "link": ""
+          }
+        ]
+      },
+      {
+        "mixedId": "m30",
+        "color": "rgb(224 79 117)",
+        "bases": [
+          {
+            "fimoId": "24",
+            "color": "rgb(228 18 47)",
+            "quantity": 100,
+            "link": ""
+          },
+          {
+            "fimoId": "22",
+            "color": "rgb(213 74 154)",
+            "quantity": 300,
+            "link": ""
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "mixedId": "m31",
+        "color": "rgb(162 90 138)",
+        "bases": [
+          {
+            "fimoId": "22",
+            "color": "rgb(213 74 154)",
+            "quantity": 375,
+            "link": ""
+          },
+          {
+            "fimoId": "9",
+            "color": "rgb(0, 0, 0)",
+            "quantity": 25,
+            "link": ""
+          }
+        ]
+      },
+      {
+        "mixedId": "m32",
+        "color": "rgb(150 90 127)",
+        "bases": [
+          {
+            "fimoId": "22",
+            "color": "rgb(213 74 154)",
+            "quantity": 350,
+            "link": ""
+          },
+          {
+            "fimoId": "9",
+            "color": "rgb(0, 0, 0)",
+            "quantity": 50,
+            "link": ""
+          }
+        ]
+      },
+      {
+        "mixedId": "m33",
+        "color": "rgb(104 63 74)",
+        "bases": [
+          {
+            "fimoId": "22",
+            "color": "rgb(213 74 154)",
+            "quantity": 300,
+            "link": ""
+          },
+          {
+            "fimoId": "9",
+            "color": "rgb(0, 0, 0)",
+            "quantity": 100,
+            "link": ""
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "mixedId": "m34",
+        "color": "rgb(244 231 241)",
+        "bases": [
+          {
+            "fimoId": "0",
+            "color": "rgb(255 255 255)",
+            "quantity": 375,
+            "link": ""
+          },
+          {
+            "fimoId": "63",
+            "color": "rgb(107 46 139)",
+            "quantity": 25,
+            "link": ""
+          }   
+        ]
+      },
+      {
+        "mixedId": "m35",
+        "color": "rgb(237 172 202)",
+        "bases": [
+          {
+            "fimoId": "0",
+            "color": "rgb(255 255 255)",
+            "quantity": 300,
+            "link": ""
+          },
+          {
+            "fimoId": "63",
+            "color": "rgb(107 46 139)",
+            "quantity": 100,
+            "link": ""
+          } 
+        ]
+      },
+      {
+        "mixedId": "m36",
+        "color": "rgb(227 136 183)",
+        "bases": [
+          {
+            "fimoId": "0",
+            "color": "rgb(255 255 255)",
+            "quantity": 200,
+            "link": ""
+          },
+          {
+            "fimoId": "63",
+            "color": "rgb(107 46 139)",
+            "quantity": 200,
+            "link": ""
+          } 
+        ]
+      }
+    ],
+    [
+      {
+        "mixedId": "m37",
+        "color": "rgb(201 74 149)",
+        "bases": [
+          {
+            "fimoId": "22",
+            "color": "rgb(213 74 154)",
+            "quantity": 375,
+            "link": ""
+          },
+          {
+            "fimoId": "63",
+            "color": "rgb(107 46 139)",
+            "quantity": 25,
+            "link": ""
+          }
+        ]
+      },
+      {
+        "mixedId": "m38",
+        "color": "rgb(146 79 154)",
+        "bases": [
+          {
+            "fimoId": "22",
+            "color": "rgb(213 74 154)",
+            "quantity": 200,
+            "link": ""
+          },
+          {
+            "fimoId": "63",
+            "color": "rgb(107 46 139)",
+            "quantity": 200,
+            "link": ""
+          }
+        ]
+      },
+      {
+        "mixedId": "m39",
+        "color": "rgb(129 68 149)", 
+        "bases": [
+          {
+            "fimoId": "22",
+            "color": "rgb(213 74 154)",
+            "quantity": 100,
+            "link": ""
+          },
+          {
+            "fimoId": "63",
+            "color": "rgb(107 46 139)",
+            "quantity": 300,
+            "link": ""
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "mixedId": "m40",
+        "color": "rgb(110 68 138)",
+        "bases": [
+          {
+            "fimoId": "63",
+            "color": "rgb(107 46 139)",
+            "quantity": 375,
+            "link": ""
+          },
+          {
+            "fimoId": "9",
+            "color": "rgb(0, 0, 0)",
+            "quantity": 25,
+            "link": ""
+          }
+        ]
+      },
+      {
+        "mixedId": "m41",
+        "color": "rgb(110 68 117)",
+        "bases": [
+          {
+            "fimoId": "63",
+            "color": "rgb(107 46 139)",
+            "quantity": 350,
+            "link": ""
+          },
+          {
+            "fimoId": "9",
+            "color": "rgb(0, 0, 0)",
+            "quantity": 50,
+            "link": ""
+          }
+        ]
+      },
+      {
+        "mixedId": "m42",
+        "color": "rgb(93 57 80)",
+        "bases": [
+          {
+            "fimoId": "63",
+            "color": "rgb(107 46 139)",
             "quantity": 300,
             "link": ""
           },
