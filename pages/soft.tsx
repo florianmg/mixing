@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import ClassicBlock from "../src/components/classic-block";
 import GroupColor from "../src/components/group-color";
 
-import { ClassicPageProps } from "../src/types/pages.types";
+import { SoftPageProps } from "../src/types/pages.types";
 
 import style from "../styles/Classic.module.scss";
 
@@ -21,7 +21,7 @@ export async function getStaticProps() {
   };
 }
 
-const Classic: React.FC<ClassicPageProps> = ({ originalClay, mixedClay }) => {
+const Soft: React.FC<SoftPageProps> = ({ originalClay, mixedClay }) => {
   const [originalClaySelected, setOriginalClaySelected] = useState([]);
 
   const checkIfSelected = (items): boolean => {
@@ -72,4 +72,4 @@ const Classic: React.FC<ClassicPageProps> = ({ originalClay, mixedClay }) => {
   );
 };
 
-export default Classic;
+export default Soft;

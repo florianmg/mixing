@@ -14,8 +14,8 @@ export default function NavBar() {
         </ul>
         <ul className={style.side}>
           <li>
-            <Link href="/classic">
-              <a>Classic</a>
+            <Link href="/soft">
+              <a>Soft</a>
             </Link>
           </li>
           <li>

@@ -24,7 +24,7 @@ type MixedClayTye = {
   ];
 }[][];
 
-export type ClassicPageProps = {
+export type SoftPageProps = {
   originalClay: OriginalClayType;
   mixedClay: MixedClayTye;
 };
