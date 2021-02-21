@@ -1,3 +1,5 @@
+import classnames from "classnames";
+
 import style from "./ClassicBlock.module.scss";
 
 export default function ClassicBlock({
@@ -10,12 +12,10 @@ export default function ClassicBlock({
     <div
       key={blockKey}
       onClick={handleSelectFilter}
-      className={style["classic-block"]}
-      style={
-        selected
-          ? { backgroundColor: color, borderColor: "red", borderStyle: "solid" }
-          : { backgroundColor: color }
-      }
+      className={classnames(style["classic-block"], {
+        [style.selected]: selected,
+      })}
+      style={{ backgroundColor: color }}
     >
       <p className={style.text}>{blockKey}</p>
     </div>
