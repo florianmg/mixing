@@ -5,7 +5,7 @@ const GroupColor = ({ mixedList }) => {
   return (
     <div className={style.container}>
       {mixedList.map(({ mixedId, color, bases }) => (
-        <Block color={color} key={mixedId} bases={bases} />
+        <Block key={mixedId} color={color} bases={bases} mixedId={mixedId} />
       ))}
     </div>
   );

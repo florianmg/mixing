@@ -23,18 +23,21 @@ export async function getStaticProps() {
 
 const Classic: React.FC<ClassicPageProps> = ({ originalClay, mixedClay }) => {
   return (
-    <div className={style.pageContainer}>
+    <div className={style.pageContainer} key="classic-page">
       <h3>Original Clay's</h3>
       <div className={style.originals}>
         {originalClay.map(({ color, fimoId }) => (
-          <ClassicBlock blockKey={fimoId} color={color} key={fimoId} />
+          <ClassicBlock key={fimoId} blockKey={fimoId} color={color} />
         ))}
       </div>
       <div className={style["mix-container"]}>
         <h3>Mixed Clay</h3>
         <div className={style["mix-list"]}>
           {mixedClay.map((items) => (
-            <GroupColor mixedList={items} />
+            <GroupColor
+              mixedList={items}
+              key={`group-color${items[0].mixedId}`}
+            />
           ))}
         </div>
       </div>
