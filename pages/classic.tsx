@@ -32,6 +32,14 @@ const Classic: React.FC<ClassicPageProps> = ({ originalClay, mixedClay }) => {
     );
   };
 
+  const handleFilter = (fimoId) => {
+    if (originalClaySelected[0] === fimoId) {
+      setOriginalClaySelected([]);
+    } else {
+      setOriginalClaySelected([fimoId]);
+    }
+  };
+
   return (
     <div className={style.pageContainer} key="classic-page">
       <h3>Original Clay's</h3>
@@ -42,7 +50,7 @@ const Classic: React.FC<ClassicPageProps> = ({ originalClay, mixedClay }) => {
             blockKey={fimoId}
             color={color}
             selected={originalClaySelected.includes(fimoId)}
-            handleSelectFilter={() => setOriginalClaySelected([fimoId])}
+            handleSelectFilter={() => handleFilter(fimoId)}
           />
         ))}
       </div>
