@@ -20,6 +20,7 @@
   }
 }
 .selected {
+  border: 2px solid silver;
   transform: scaleY(1.2);
   .text {
     transform: scaleY(.8);
