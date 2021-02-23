@@ -22,7 +22,7 @@ type MixedClayTye = {
       quantity: number;
     }
   ];
-}[][];
+}[];
 
 export type SoftPageProps = {
   originalClay: OriginalClayType;
