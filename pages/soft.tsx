@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 import ClassicBlock from "../src/components/classic-block";
-import GroupColor from "../src/components/group-color";
 import Block from "../src/components/block";
 import Modal from "../src/components/modal";
 
@@ -27,19 +26,11 @@ const Soft: React.FC<SoftPageProps> = ({ originalClay, mixedClay }) => {
   const [originalClaySelected, setOriginalClaySelected] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const checkIfSelected = (items): boolean => {
+  const checkIfIsSelected = (bases) => {
     if (originalClaySelected.length === 0) return true;
     return (
-      originalClaySelected.includes(items[0].bases[0].fimoId) ||
-      originalClaySelected.includes(items[0].bases[1].fimoId)
-    );
-  };
-
-  const checkIfIsSelected = (item) => {
-    if (originalClaySelected.length === 0) return true;
-    return (
-      originalClaySelected.includes(item.bases[0].fimoId) ||
-      originalClaySelected.includes(item.bases[1].fimoId)
+      originalClaySelected.includes(bases[0].fimoId) ||
+      originalClaySelected.includes(bases[1].fimoId)
     );
   };
 
@@ -50,7 +41,7 @@ const Soft: React.FC<SoftPageProps> = ({ originalClay, mixedClay }) => {
       setOriginalClaySelected([fimoId]);
     }
   };
-  console.log(mixedClay);
+
   return (
     <>
       <Modal isOpen={isModalOpen} onCrossClick={() => setIsModalOpen(false)}>
@@ -76,14 +67,17 @@ const Soft: React.FC<SoftPageProps> = ({ originalClay, mixedClay }) => {
         <div className={style["mix-container"]}>
           <h3>Mixed Clay</h3>
           <div className={style["mix-list"]}>
-            {mixedClay.map(({ color, bases, mixedId }) => (
-              <Block
-                key={`mixed-${mixedId}`}
-                color={color}
-                bases={bases}
-                mixedId={mixedId}
-              />
-            ))}
+            {mixedClay.map(
+              ({ color, bases, mixedId }) =>
+                checkIfIsSelected(bases) && (
+                  <Block
+                    key={`mixed-${mixedId}`}
+                    color={color}
+                    bases={bases}
+                    mixedId={mixedId}
+                  />
+                )
+            )}
           </div>
         </div>
       </div>
