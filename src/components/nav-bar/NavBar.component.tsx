@@ -12,18 +12,6 @@ export default function NavBar() {
             </Link>
           </li>
         </ul>
-        <ul className={style.side}>
-          <li>
-            <Link href="/soft">
-              <a>Soft</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/professional">
-              <a>Professional</a>
-            </Link>
-          </li>
-        </ul>
       </div>
     </nav>
   );
