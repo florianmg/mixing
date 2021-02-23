@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import ClassicBlock from "../src/components/classic-block";
 import Block from "../src/components/block";
-import Modal from "../src/components/modal";
 
 import { SoftPageProps } from "../src/types/pages.types";
 
@@ -24,7 +23,6 @@ export async function getStaticProps() {
 
 const Soft: React.FC<SoftPageProps> = ({ originalClay, mixedClay }) => {
   const [originalClaySelected, setOriginalClaySelected] = useState([]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const checkIfIsSelected = (bases) => {
     if (originalClaySelected.length === 0) return true;
@@ -44,14 +42,7 @@ const Soft: React.FC<SoftPageProps> = ({ originalClay, mixedClay }) => {
 
   return (
     <>
-      <Modal isOpen={isModalOpen} onCrossClick={() => setIsModalOpen(false)}>
-        <p>Je suis le content de la modale, enfin on test</p>
-      </Modal>
-      <div
-        className={style.pageContainer}
-        key="classic-page"
-        onClick={() => setIsModalOpen(true)}
-      >
+      <div className={style.pageContainer} key="classic-page">
         <h3>Original Clay's</h3>
         <div className={style.originals}>
           {originalClay.map(({ color, fimoId }) => (
