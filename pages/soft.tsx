@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import ClassicBlock from "../src/components/classic-block";
 import GroupColor from "../src/components/group-color";
+import Modal from "../src/components/modal";
 
 import { SoftPageProps } from "../src/types/pages.types";
 
@@ -23,6 +24,7 @@ export async function getStaticProps() {
 
 const Soft: React.FC<SoftPageProps> = ({ originalClay, mixedClay }) => {
   const [originalClaySelected, setOriginalClaySelected] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const checkIfSelected = (items): boolean => {
     if (originalClaySelected.length === 0) return true;
@@ -41,34 +43,43 @@ const Soft: React.FC<SoftPageProps> = ({ originalClay, mixedClay }) => {
   };
 
   return (
-    <div className={style.pageContainer} key="classic-page">
-      <h3>Original Clay's</h3>
-      <div className={style.originals}>
-        {originalClay.map(({ color, fimoId }) => (
-          <ClassicBlock
-            key={fimoId}
-            blockKey={fimoId}
-            color={color}
-            selected={originalClaySelected.includes(fimoId)}
-            handleSelectFilter={() => handleFilter(fimoId)}
-          />
-        ))}
-      </div>
-      <div className={style["mix-container"]}>
-        <h3>Mixed Clay</h3>
-        <div className={style["mix-list"]}>
-          {mixedClay.map(
-            (items) =>
-              checkIfSelected(items) && (
-                <GroupColor
-                  mixedList={items}
-                  key={`group-color${items[0].mixedId}`}
-                />
-              )
-          )}
+    <>
+      <Modal isOpen={isModalOpen} onCrossClick={() => setIsModalOpen(false)}>
+        <p>Je suis le content de la modale, enfin on test</p>
+      </Modal>
+      <div
+        className={style.pageContainer}
+        key="classic-page"
+        onClick={() => setIsModalOpen(true)}
+      >
+        <h3>Original Clay's</h3>
+        <div className={style.originals}>
+          {originalClay.map(({ color, fimoId }) => (
+            <ClassicBlock
+              key={fimoId}
+              blockKey={fimoId}
+              color={color}
+              selected={originalClaySelected.includes(fimoId)}
+              handleSelectFilter={() => handleFilter(fimoId)}
+            />
+          ))}
+        </div>
+        <div className={style["mix-container"]}>
+          <h3>Mixed Clay</h3>
+          <div className={style["mix-list"]}>
+            {mixedClay.map(
+              (items) =>
+                checkIfSelected(items) && (
+                  <GroupColor
+                    mixedList={items}
+                    key={`group-color${items[0].mixedId}`}
+                  />
+                )
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
