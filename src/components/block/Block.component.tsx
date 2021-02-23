@@ -23,6 +23,9 @@ export default function Block({ color, bases, mixedId }) {
 
   return (
     <div style={{ backgroundColor: color }} className={style.block}>
+      <p className={style["blend-ids"]}>
+        {bases[0].fimoId} + {bases[1].fimoId}
+      </p>
       <div className={style.content}>
         <div className={style.side}>
           {renderBars({ color: bases[0].color, quantity: bases[0].quantity })}
