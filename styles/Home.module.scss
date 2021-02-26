@@ -1,0 +1,53 @@
+.home {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
+  background-size: 600%;
+  animation: anime 7s linear infinite;
+  font-family: 'Montserrat', sans-serif;
+  .content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, .6);
+  }
+  .title {
+    max-width: 750px;
+    font-size: 62px;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
+  .cta {
+    padding: 15px 20px;
+    background: #515ada;
+    cursor: pointer;
+    border-radius: 7px;
+    font-size: 26px;
+    &:hover {
+      background: #666dcd;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+@keyframes anime {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
