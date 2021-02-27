@@ -43,20 +43,26 @@ const Soft: React.FC<SoftPageProps> = ({ originalClay, mixedClay }) => {
   return (
     <>
       <div className={style.pageContainer} key="classic-page">
-        <h3>Original Clay's</h3>
-        <div className={style.originals}>
-          {originalClay.map(({ color, fimoId }) => (
-            <ClassicBlock
-              key={fimoId}
-              blockKey={fimoId}
-              color={color}
-              selected={originalClaySelected.includes(fimoId)}
-              handleSelectFilter={() => handleFilter(fimoId)}
-            />
-          ))}
+        <div className={style.tutorial}>
+          <h1>How do i blend my fimo ?</h1>
         </div>
+        <div className={style["originals-container"]}>
+          <h3>Original Fimo Soft</h3>
+          <div className={style.originals}>
+            {originalClay.map(({ color, fimoId }) => (
+              <ClassicBlock
+                key={fimoId}
+                blockKey={fimoId}
+                color={color}
+                selected={originalClaySelected.includes(fimoId)}
+                handleSelectFilter={() => handleFilter(fimoId)}
+              />
+            ))}
+          </div>
+        </div>
+
         <div className={style["mix-container"]}>
-          <h3>Mixed Clay</h3>
+          <h3>Mixed Fimo soft possibilities</h3>
           <div className={style["mix-list"]}>
             {mixedClay.map(
               ({ color, bases, mixedId }) =>
