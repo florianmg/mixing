@@ -5,23 +5,14 @@ import Link from "next/link";
 import ClassicBlock from "../src/components/classic-block";
 import Block from "../src/components/block";
 
-import { SoftPageProps } from "../src/types/pages.types";
-import Fimos from "../public/clays.json";
+import Fimo from "../public/clays.json";
 
 import style from "../styles/Classic.module.scss";
 
-export async function getStaticProps() {
-  const { fimo, mixed } = Fimos;
-  return {
-    props: {
-      originalClay: fimo,
-      mixedClay: mixed,
-    },
-  };
-}
-
-const Soft: React.FC<SoftPageProps> = ({ originalClay, mixedClay }) => {
+const Soft: React.FC = () => {
   const [originalClaySelected, setOriginalClaySelected] = useState([]);
+
+  const { fimo, mixed } = Fimo;
 
   const checkIfIsSelected = (bases) => {
     if (originalClaySelected.length === 0) return true;
@@ -45,7 +36,7 @@ const Soft: React.FC<SoftPageProps> = ({ originalClay, mixedClay }) => {
         <div className={style["originals-container"]}>
           <h3 className={style["zone-title"]}>Original Fimo Soft :</h3>
           <div className={style.originals}>
-            {originalClay.map(({ color, fimoId }) => (
+            {fimo.map(({ color, fimoId }) => (
               <ClassicBlock
                 key={fimoId}
                 blockKey={fimoId}
@@ -64,7 +55,7 @@ const Soft: React.FC<SoftPageProps> = ({ originalClay, mixedClay }) => {
             Mixed Fimo soft possibilities :
           </h3>
           <div className={style["mix-list"]}>
-            {mixedClay.map(
+            {mixed.map(
               ({ color, bases, mixedId }) =>
                 checkIfIsSelected(bases) && (
                   <Block
