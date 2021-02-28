@@ -17,16 +17,21 @@ const Soft: React.FC = () => {
   const checkIfIsSelected = (bases) => {
     if (originalClaySelected.length === 0) return true;
     return (
-      originalClaySelected.includes(bases[0].fimoId) ||
+      originalClaySelected.includes(bases[0].fimoId) &&
       originalClaySelected.includes(bases[1].fimoId)
     );
   };
 
   const handleFilter = (fimoId) => {
-    if (originalClaySelected[0] === fimoId) {
-      setOriginalClaySelected([]);
+    if (originalClaySelected.includes(fimoId)) {
+      const newOriginalClaySelected = originalClaySelected.filter(
+        (id) => id !== fimoId
+      );
+      setOriginalClaySelected(newOriginalClaySelected);
     } else {
-      setOriginalClaySelected([fimoId]);
+      const copy = [...originalClaySelected];
+      copy.push(fimoId);
+      setOriginalClaySelected(copy);
     }
   };
 
