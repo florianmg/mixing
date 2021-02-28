@@ -1,15 +1,39 @@
 .pageContainer {
-  max-width: 1800px;
   width: 100%;
   display: flex;
   margin: auto;
   flex-direction: column;
-  padding: 0 25px;
+  padding: 100px 150px;
   box-sizing: border-box;
+  p {
+    margin: 0 0 10px 0
+  }
+
+  .tutorial-link {
+    display: block;
+    width: 120px;
+    margin: 100px auto 0 auto;
+    text-align: center;
+    text-decoration: none;
+    background: #515ada;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    &:hover {
+      background: #338AFF;
+    }
+  }
+
+  .zone-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 21px;
+    text-decoration: underline;
+    margin-bottom: 25px;
+  }
 
   .originals {
     display: flex;
-    padding: 0 25px;
     box-sizing: border-box;
   }
 
@@ -22,4 +46,16 @@
     justify-content: center;
     flex-wrap: wrap;
   }
+}
+
+@media (max-width: 1080px) {
+  .pageContainer {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 520px) {
+    .pageContainer {
+      padding: 50px 15px;
+    }
 }

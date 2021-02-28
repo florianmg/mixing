@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import Link from "next/link";
+
 import ClassicBlock from "../src/components/classic-block";
 import Block from "../src/components/block";
 
@@ -43,11 +45,8 @@ const Soft: React.FC<SoftPageProps> = ({ originalClay, mixedClay }) => {
   return (
     <>
       <div className={style.pageContainer} key="classic-page">
-        <div className={style.tutorial}>
-          <h1>How do i blend my fimo ?</h1>
-        </div>
         <div className={style["originals-container"]}>
-          <h3>Original Fimo Soft</h3>
+          <h3 className={style["zone-title"]}>Original Fimo Soft :</h3>
           <div className={style.originals}>
             {originalClay.map(({ color, fimoId }) => (
               <ClassicBlock
@@ -60,9 +59,13 @@ const Soft: React.FC<SoftPageProps> = ({ originalClay, mixedClay }) => {
             ))}
           </div>
         </div>
-
+        <Link href="/tutorial">
+          <a className={style["tutorial-link"]}>How It works ?</a>
+        </Link>
         <div className={style["mix-container"]}>
-          <h3>Mixed Fimo soft possibilities</h3>
+          <h3 className={style["zone-title"]}>
+            Mixed Fimo soft possibilities :
+          </h3>
           <div className={style["mix-list"]}>
             {mixedClay.map(
               ({ color, bases, mixedId }) =>
