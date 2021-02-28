@@ -16,6 +16,11 @@ const Soft: React.FC = () => {
 
   const checkIfIsSelected = (bases) => {
     if (originalClaySelected.length === 0) return true;
+    if (originalClaySelected.length === 1)
+      return (
+        originalClaySelected.includes(bases[0].fimoId) ||
+        originalClaySelected.includes(bases[1].fimoId)
+      );
     return (
       originalClaySelected.includes(bases[0].fimoId) &&
       originalClaySelected.includes(bases[1].fimoId)
